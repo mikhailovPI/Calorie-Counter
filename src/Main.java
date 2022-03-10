@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
+
 
     public static void main(String[] args) {
 
@@ -21,7 +22,7 @@ public class main {
                 String mon = months.toLowerCase();
                 System.out.println("Укажите день, за который необходимо ввести количество шагов:");
                 int dayUser = scan.nextInt();
-                stepTracker.saveStep(mon,dayUser);
+                stepTracker.saveStep(mon, dayUser);
 
             } else if (command == 2) {
                 Scanner scan = new Scanner(System.in);
