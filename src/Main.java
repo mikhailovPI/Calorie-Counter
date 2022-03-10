@@ -1,46 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
-
-
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker();
-        stepTracker.table();
-        stepTracker.dayMas();
-        stepTracker.stepZero();
 
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             printMenu();
             int command = scanner.nextInt();
-            if (command == 1) {
 
-                Scanner scan = new Scanner(System.in);
+            if (command == 1) {
                 System.out.println("Укажите месяц, за который необходимо ввести количество шагов:");
-                String months = scan.nextLine();
-                String mon = months.toLowerCase();
+                int month = scanner.nextInt();
                 System.out.println("Укажите день, за который необходимо ввести количество шагов:");
-                int dayUser = scan.nextInt();
-                stepTracker.saveStep(mon, dayUser);
+                int dayUser = scanner.nextInt();
+                System.out.println("Укажите количество шагов:");
+                int step = scanner.nextInt();
+                stepTracker.getSaveStep(month, dayUser, step);
 
             } else if (command == 2) {
-                Scanner scan = new Scanner(System.in);
                 System.out.println("За какой месяц вывести статистику?");
-                String monthsStat = scan.nextLine();
-                String monthStat = monthsStat.toLowerCase();
+                int monthStat = scanner.nextInt();
                 System.out.println(" Вы имеете следующую статистику:");
-                stepTracker.stepVar(monthStat);
-                stepTracker.stepSum(monthStat);
-                stepTracker.stepMax(monthStat);
-                stepTracker.stepMiddle(monthStat);
-                stepTracker.stepDis(monthStat);
-                stepTracker.calor(monthStat);
-                stepTracker.stepWin(monthStat);
+                stepTracker.getStatisticMonth(monthStat);
 
             } else if (command == 3) {
                 stepTracker.objectiveStep();
-
 
             } else if (command == 4) {
                 System.out.println("До встречи!");
