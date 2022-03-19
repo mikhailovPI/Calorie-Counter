@@ -18,7 +18,9 @@
 
 Программа написана на Java. Пример кода:
 
-
-```public class Main {
-```public static void main(String[] args) {
+```java
+public class Main {
+   public static void main(String[] args) {
+    }
 }
+```
