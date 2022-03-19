@@ -14,7 +14,6 @@ public class StepTracker {
     public StepTracker() {
         for (int i = 1; i <= 12; i++) {
             monthToData.put(i, new ArrayList<Integer>(dayMax));
-            
             for (int j = 0; j < dayMax; j++) {
                 Integer zero = 0;
                 monthToData.get(i).add(j, zero);
