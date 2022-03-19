@@ -19,8 +19,15 @@
 Программа написана на Java. Пример кода:
 
 ```java
+import java.util.Scanner;
+
 public class Main {
-   public static void main(String[] args) {
-    }
-}
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        StepTracker stepTracker = new StepTracker();
+
+        while (true) {
+            printMenu();
+            int command = scanner.nextInt();
 ```
