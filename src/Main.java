@@ -1,10 +1,13 @@
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker();
+
+
 
         while (true) {
             printMenu();
@@ -26,7 +29,9 @@ public class Main {
                 stepTracker.getStatisticMonth(monthStat);
 
             } else if (command == 3) {
-                stepTracker.objectiveStep();
+                System.out.println("Введите новую цель по количеству шагов в день:");
+                int objective = scanner.nextInt();
+                stepTracker.objectiveStep(objective);
 
             } else if (command == 4) {
                 System.out.println("До встречи!");
