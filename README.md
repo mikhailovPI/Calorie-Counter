@@ -1,5 +1,4 @@
-# java-sprint1-hw
-First sprint homework
+
 # Программа счетчика каллорий
 
 **Данная программа может**
@@ -18,3 +17,7 @@ First sprint homework
 4.7. Лучшая серия: максимальное количество подряд идущих дней, в течение которых количество шагов за день было равно или выше целевого.
 
 Программа написана на Java
+
+public class Main {
+
+    public static void main(String[] args) {
