@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40c1265e-96bd-463d-aae1-0578760cab35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java-sprint1-hw.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/StepTrackerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calorie Counter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calorie Counter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="40c1265e-96bd-463d-aae1-0578760cab35" name="Changes" comment="Test: добавлены тесты">
       <change beforePath="$PROJECT_DIR$/src/StepTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StepTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/StepTrackerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/StepTrackerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +118,21 @@
       <option name="presentableId" value="Default" />
       <updated>1646906854696</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test: добавлены тесты">
+      <created>1655230946186</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655230946186</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Test: добавлены тесты">
+      <created>1655230993445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655230993445</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +145,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test: добавлены тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test: добавлены тесты" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Calorie_Counter$All_in_Calorie_Counter.ic" NAME="All in Calorie Counter Coverage Results" MODIFIED="1655230870092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -11,7 +11,7 @@ public class StepTracker {
     HashMap<Integer, ArrayList<Integer>> monthToData = new HashMap<>();
 
     //создание хэш-таблицы для хранения данных
-    public StepTracker() {
+    public StepTracker () {
         for (int i = 1; i <= 12; i++) {
             monthToData.put(i, new ArrayList<Integer>(dayMax));
             for (int j = 0; j < dayMax; j++) {
@@ -22,7 +22,7 @@ public class StepTracker {
     }
 
     // метод для хранения данных о количестве пройденных шагов
-    HashMap<Integer, ArrayList<Integer>> getSaveStep(int month, int dayUser, int step) {
+    HashMap<Integer, ArrayList<Integer>> getSaveStep (int month, int dayUser, int step) {
         if (dayUser < 1) {
             System.out.println("Введите корректный день.");
             return null;
@@ -36,7 +36,7 @@ public class StepTracker {
     }
 
     //метод для вывода статистики за месяц
-    void getStepVar(int monthStat) {
+    void getStepVar (int monthStat) {
         ArrayList<Integer> getStepMonth = monthToData.get(monthStat);
         for (int i = 0; i < dayMax; i++) {
             System.out.printf("День " + (i + 1) + ": " + getStepMonth.get(i) + "; ");
@@ -44,7 +44,7 @@ public class StepTracker {
     }
 
     //метод для вывода общего числа шагов за месяц
-    int getStepSum(int monthStat) {
+    int getStepSum (int monthStat) {
         ArrayList<Integer> getStepMonth = monthToData.get(monthStat);
         for (int i = 0; i < dayMax; i++) {
             summaStep = summaStep + getStepMonth.get(i);
@@ -54,7 +54,7 @@ public class StepTracker {
     }
 
     //метод для вывода максимального количества шагов за месяц
-    double getStepMax(int monthStat) {
+    double getStepMax (int monthStat) {
         int maximumStep = 0;
         ArrayList<Integer> getStepMonth = monthToData.get(monthStat);
         for (int i = 0; i < dayMax; i++) {
@@ -67,7 +67,7 @@ public class StepTracker {
     }
 
     //метод для вывода среднего количества шагов за месяц
-    double getStepMiddle(int monthStat) {
+    double getStepMiddle (int monthStat) {
         int summaStep = getStepSum(monthStat);
         double middleStep = summaStep / dayMax;
         System.out.println("Среднее количество шагов:" + middleStep);
@@ -75,7 +75,7 @@ public class StepTracker {
     }
 
     // метод по определению полосы достижений
-    int getStepWin(int monthStat) {
+    int getStepWin (int monthStat) {
         int stepSeries = 0; // максимальная серия
         int check = 0; // счетчик дней
         ArrayList<Integer> stepMo = monthToData.get(monthStat);
@@ -95,7 +95,7 @@ public class StepTracker {
     }
 
     //метод для отображения статистики
-    void getStatisticMonth(int month) {
+    void getStatisticMonth (int month) {
         getStepVar(month);
         getStepSum(month);
         getStepMax(month);
@@ -106,7 +106,7 @@ public class StepTracker {
     }
 
     // метод для задания новой цели
-    int objectiveStep(int objective) {
+    int objectiveStep (int objective) {
         while (true) {
             if (objective < 0) {
                 System.out.println("Цель не может быть отрицательной. Введите новую цель.");

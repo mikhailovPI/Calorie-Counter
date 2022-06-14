@@ -10,8 +10,6 @@ class StepTrackerTest {
     Converter converter = new Converter();
     StepTracker stepTracker = new StepTracker();
 
-
-
     @Test
     void wrongDayTest() {
         int month = 1;
@@ -58,6 +56,7 @@ class StepTrackerTest {
         for (int i =1; i<=dayMax; i++) {
             stepTracker.getSaveStep(month, i, 10000);
         }
+
         assertEquals(10000.0, stepTracker.getStepMiddle(month));
     }
 
@@ -67,6 +66,7 @@ class StepTrackerTest {
         for (int i =1; i<=dayMax; i++) {
             stepTracker.getSaveStep(month, i, 9000);
         }
+
         assertEquals(0, stepTracker.getStepWin(month));
     }
 
