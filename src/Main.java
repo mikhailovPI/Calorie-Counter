@@ -7,8 +7,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker();
 
-
-
         while (true) {
             printMenu();
             int command = scanner.nextInt();

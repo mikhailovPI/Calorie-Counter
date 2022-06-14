@@ -4,7 +4,7 @@ import java.util.HashMap;
 public class StepTracker {
 
     int dayMax = 30;
-    int summaStep = 0; // ввожу ее тут, т.к. она используется дальше в расчетах среднего значения, дистанции и калорий
+    int summaStep = 0;
     int objectiveOld = 10000;
 
     Converter converter = new Converter();
@@ -25,10 +25,12 @@ public class StepTracker {
     HashMap<Integer, ArrayList<Integer>> getSaveStep(int month, int dayUser, int step) {
         if (dayUser < 1) {
             System.out.println("Введите корректный день.");
+            return null;
         } else if (dayUser <= dayMax) {
             monthToData.get(month).set(dayUser - 1, step); // список шагов
         } else {
             System.out.println("В месяце всего " + dayMax + " дней. Введите корректный день.");
+            return null;
         }
         return monthToData;
     }
@@ -39,7 +41,6 @@ public class StepTracker {
         for (int i = 0; i < dayMax; i++) {
             System.out.printf("День " + (i + 1) + ": " + getStepMonth.get(i) + "; ");
         }
-
     }
 
     //метод для вывода общего числа шагов за месяц
@@ -67,6 +68,7 @@ public class StepTracker {
 
     //метод для вывода среднего количества шагов за месяц
     double getStepMiddle(int monthStat) {
+        int summaStep = getStepSum(monthStat);
         double middleStep = summaStep / dayMax;
         System.out.println("Среднее количество шагов:" + middleStep);
         return middleStep;
@@ -77,8 +79,9 @@ public class StepTracker {
         int stepSeries = 0; // максимальная серия
         int check = 0; // счетчик дней
         ArrayList<Integer> stepMo = monthToData.get(monthStat);
-        for (int j = 0; j < stepMo.size(); j++) {
-            if (stepMo.get(j) >= objectiveOld) {
+        System.out.println(stepMo);
+        for (int i = 0; i < stepMo.size(); i++) {
+            if (stepMo.get(i) >= objectiveOld) {
                 check += 1;
             } else {
                 if (check > stepSeries) {
@@ -103,16 +106,17 @@ public class StepTracker {
     }
 
     // метод для задания новой цели
-    void objectiveStep(int objective) {
-
+    int objectiveStep(int objective) {
         while (true) {
             if (objective < 0) {
                 System.out.println("Цель не может быть отрицательной. Введите новую цель.");
+                break;
             } else {
                 objectiveOld = objective;
                 System.out.println("Новая цель в " + objectiveOld + " установлена!");
             }
             break;
         }
+        return objectiveOld;
     }
 }
